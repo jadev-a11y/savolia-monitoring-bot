@@ -1,192 +1,254 @@
-# 🤖 Savolia AI Advanced Monitoring Bot 2025
+# 🤖 Savolia AI Advanced Monitoring Bot
 
-Расширенный мониторинг бот для Savolia AI с интеграцией Render.com логов и AI аналитикой.
+> **Real-time monitoring and analytics bot for Savolia AI with Render.com integration**
 
-## 🚀 Возможности
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
+[![Telegram Bot API](https://img.shields.io/badge/Telegram%20Bot%20API-20.7-blue.svg)](https://python-telegram-bot.org)
+[![Render.com](https://img.shields.io/badge/Render.com-Integration-green.svg)](https://render.com)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-### 📊 Основные функции
-- **Real-time мониторинг** всех сервисов Render.com  
-- **AI аналитика** логов и метрик
-- **Интерактивные графики** и визуализация
-- **Уведомления об ошибках** в реальном времени
-- **Прогнозирование доходов** с ML
-- **Многоязычная поддержка** (Русский/Узбекский)
+## 🚀 Features
 
-### 🔥 Render.com интеграция
-- Просмотр логов всех 4 сервисов: savolia-web, savolia-frontend, savolia-bot, savolia-backend
-- Мониторинг статуса деплоя
-- Автоматические алерты при ошибках
-- Фильтрация по типам логов (ERROR, WARNING, INFO)
-- Real-time стриминг критических ошибок
+### 📊 **Real-time Monitoring**
+- **4 Services tracking**: `savolia-web`, `savolia-frontend`, `savolia-backend`, `savolia-bot`
+- **Live logs streaming** with error detection
+- **Deployment status** monitoring  
+- **Automated alerts** for critical issues
 
-### 📈 Аналитика
-- Системные метрики и производительность
-- Анализ ошибок и аномалий  
-- AI-powered инсайты
-- Предсказание трендов
-- Revenue аналитика
+### 🔥 **Advanced Analytics**
+- **AI-powered log analysis** using GPT
+- **Interactive charts** and visualizations
+- **Performance metrics** extraction
+- **Anomaly detection** algorithms
+- **Revenue forecasting** with ML
 
-## ⚙️ Установка и настройка
+### 🌍 **Multi-language Support**
+- **Uzbek Latin** interface for local team
+- **Russian** documentation and responses
+- **English** technical logs and errors
 
-### 1. Клонирование и установка зависимостей
+## 📱 Bot Commands
 
+### 🔐 Authentication
 ```bash
-cd /Users/jasur/Desktop/Savolia-Telegram-Monitor-Bot
+/start          # Start the bot
+/auth PASSWORD  # Login (Password: SavoliaAdmin2025!)
+/help           # Show all commands
+```
+
+### 🖥️ Render Monitoring
+```bash
+/render_services  # List all services  
+/render_logs     # View logs by service
+/render_errors   # Show only errors
+/render_deploy   # Deployment status
+/render_status   # System health check
+/render_realtime # Real-time error monitoring
+```
+
+### 📊 Analytics & AI
+```bash
+/dashboard      # Main monitoring dashboard
+/ai_analysis    # AI-powered insights
+/metrics        # System metrics
+/charts         # Generate visualizations
+/predict        # Revenue forecasting
+```
+
+## ⚙️ Quick Setup
+
+### 1. **Clone Repository**
+```bash
+git clone https://github.com/jadev-a11y/savolia-monitoring-bot.git
+cd savolia-monitoring-bot
+```
+
+### 2. **Install Dependencies**
+```bash
+# For quick demo (minimal features)
+pip install -r requirements-minimal.txt
+
+# For full version (with AI and charts)  
 pip install -r requirements.txt
 ```
 
-### 2. Настройка переменных окружения
-
-Скопируйте файл с примером и заполните ваши данные:
-
+### 3. **Environment Setup**
 ```bash
 cp .env.example .env
+# Edit .env with your API keys
 ```
 
-Отредактируйте `.env` файл:
-
+Required environment variables:
 ```env
-# Обязательные параметры
 BOT_TOKEN=8087171595:AAGcTv_TiNAY-Mv8CSyaIwk2tzYnnEM4Dsk
+RENDER_API_KEY=your_render_api_key_here
+OPENAI_API_KEY=your_openai_key_here  # Optional
 ADMIN_PASSWORD=SavoliaAdmin2025!
-RENDER_BACKEND_URL=https://savolia-backend.onrender.com
-
-# Для просмотра Render логов (получите на https://dashboard.render.com/account/settings)
-RENDER_API_KEY=rnd_xxxxxxxxxxxxxxxxxxxxxxxxxx
-
-# Для AI анализа (опционально)
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-### 3. Получение Render API ключа
+### 4. **Get Render API Key**
+1. Go to [dashboard.render.com](https://dashboard.render.com/account/settings)
+2. Navigate to **Account Settings** → **API Keys**
+3. Click **Generate New API Key**
+4. Copy key to `.env` file
 
-1. Зайдите на [dashboard.render.com](https://dashboard.render.com/account/settings)
-2. Перейдите в **Account Settings**
-3. Найдите **API Keys** 
-4. Нажмите **Generate New API Key**
-5. Скопируйте ключ в `.env` файл
-
-### 4. Запуск бота
-
+### 5. **Run Bot**
 ```bash
+# Quick demo version (no heavy dependencies)
+python quick_demo_bot.py
+
+# Full featured version
 python advanced_bot.py
 ```
 
-## 📱 Команды бота
+## 🚀 Deploy to Render.com
 
-### 🔐 Авторизация
-```
-/start - Запуск бота
-/auth PASSWORD - Авторизация (пароль: SavoliaAdmin2025!)
-/help - Список всех команд
-```
+### 1. **Create New Web Service**
+- Repository: `https://github.com/jadev-a11y/savolia-monitoring-bot`
+- Environment: `Python 3`
+- Build Command: `pip install -r requirements-minimal.txt`
+- Start Command: `python quick_demo_bot.py`
 
-### 📊 Мониторинг
-```
-/dashboard - Главная панель мониторинга
-/status - Статус всех систем
-/metrics - Системные метрики
-/charts - Генерация графиков
-```
-
-### 🖥️ Render логи (НОВОЕ!)
-```
-/render_services - Список всех сервисов
-/render_logs - Выбор сервиса для просмотра логов
-/render_errors - Только ошибки по сервисам
-/render_deploy - Статус деплойментов
-/render_status - Общий статус системы
-/render_realtime - Real-time мониторинг ошибок
-/render_analyze - AI анализ логов
+### 2. **Environment Variables**
+```env
+BOT_TOKEN=8087171595:AAGcTv_TiNAY-Mv8CSyaIwk2tzYnnEM4Dsk
+RENDER_API_KEY=your_render_api_key
+ADMIN_PASSWORD=SavoliaAdmin2025!
+RENDER_BACKEND_URL=https://savolia-backend.onrender.com
 ```
 
-### 🧠 AI Аналитика
-```
-/ai_analysis - AI анализ системы
-/predict - Прогнозы доходов
-/analytics - Подробная аналитика
-```
+### 3. **Deploy**
+- Auto-deployment from GitHub
+- Health checks included
+- 24/7 monitoring
 
-### 👨‍💼 Админ команды
-```
-/admin - Админ панель
-/broadcast MESSAGE - Рассылка сообщения
-/backup - Создание бэкапа данных
-```
-
-## 🔧 Функции по сервисам
-
-Бот автоматически определяет все ваши Render сервисы и предоставляет для каждого:
-
-### 📋 Для каждого сервиса отдельно:
-- `savolia-web logs` - Логи веб-приложения
-- `savolia-frontend logs` - Логи фронтенда  
-- `savolia-backend logs` - Логи бэкенда
-- `savolia-bot logs` - Логи Telegram бота
-
-### 🚨 Автоматические уведомления:
-- Ошибки при деплое
-- Критические ошибки в логах
-- Проблемы с подключением
-- Server errors (500, 503)
-- Timeout ошибки
-
-## 📊 Интерфейс (на узбекском)
-
-Бот использует узбекскую латиницу для удобства:
-
-- `✅ Muvaffaqiyatli` - Успешно
-- `❌ Xatolik` - Ошибка  
-- `🔄 Yangilash` - Обновить
-- `📊 Tahlil` - Анализ
-- `🖥️ Render Services` - Сервисы Render
-- `📋 Loglar` - Логи
-- `🚨 Xatolar` - Ошибки
-
-## 🛠️ Устранение неполадок
-
-### Проблема: "Render API key sozlanmagan"
-**Решение:** Убедитесь что в `.env` файле указан `RENDER_API_KEY`
-
-### Проблема: "Services topilmadi"  
-**Решение:** Проверьте что API ключ правильный и у вас есть сервисы в Render
-
-### Проблема: Бот не отвечает
-**Решение:** 
-1. Проверьте `BOT_TOKEN`
-2. Пройдите авторизацию: `/auth SavoliaAdmin2025!`
-
-## 📁 Структура проекта
+## 🏗️ Architecture
 
 ```
-Savolia-Telegram-Monitor-Bot/
-├── advanced_bot.py           # Главный файл бота
-├── render_logs_viewer.py     # Интеграция с Render API
-├── telegram-logger-bot.py    # Упрощенная версия
-├── requirements.txt          # Зависимости Python
-├── .env.example             # Пример конфигурации
-└── README.md               # Эта инструкция
+┌─────────────────────┐    ┌──────────────────────┐
+│   Telegram Bot      │◄───┤   Render.com API     │
+│   (Python 3.11)     │    │   (4 Services)       │
+├─────────────────────┤    ├──────────────────────┤
+│ • Real-time logs    │    │ • savolia-web        │
+│ • Error detection   │    │ • savolia-frontend   │
+│ • AI analytics      │    │ • savolia-backend    │
+│ • Charts generation │    │ • savolia-bot        │
+└─────────────────────┘    └──────────────────────┘
+           │
+           ▼
+┌─────────────────────┐    ┌──────────────────────┐
+│   SQLite Database   │    │   OpenAI GPT API     │
+│   (Metrics & Logs)  │    │   (AI Analysis)      │
+└─────────────────────┘    └──────────────────────┘
 ```
 
-## 🔄 Обновления
+## 📊 Screenshots
 
-Бот автоматически:
-- Проверяет статус деплоя каждые 2 минуты
-- Мониторит ошибки каждые 30 секунд  
-- Генерирует AI инсайты каждый час
-- Очищает старые данные ежедневно
+### Service Monitoring Dashboard
+```
+🖥️ RENDER SERVICES
+━━━━━━━━━━━━━━━━━━━━━━━
 
-## 🆘 Поддержка
+🟢 savolia-web 🚀
+   📋 Type: static_site
+   📊 Status: available
+   🆔 ID: srv_abc123...
 
-При возникновении проблем:
+🟢 savolia-backend ⚙️  
+   📋 Type: web_service
+   📊 Status: available
+   🆔 ID: srv_def456...
+```
 
-1. Проверьте логи бота в консоли
-2. Убедитесь что все API ключи корректны
-3. Перезапустите бот
-4. Обратитесь к разработчику
+### Real-time Error Alerts
+```
+🚨 YANGI XATO TOPILDI
+
+🔥 ERROR 18:45:32
+```
+Connection refused to database
+Port 5432 unavailable
+```
+
+📧 Service: savolia-backend
+⏰ Time: 18:45:32
+```
+
+## 🛠️ Development
+
+### Project Structure
+```
+savolia-monitoring-bot/
+├── quick_demo_bot.py          # Lightweight bot (recommended)
+├── advanced_bot.py            # Full-featured bot with AI
+├── render_logs_viewer.py      # Render API integration
+├── telegram-logger-bot.py     # Legacy simple version
+├── requirements-minimal.txt   # Basic dependencies
+├── requirements.txt           # All dependencies
+├── .env.example              # Environment template
+├── README.md                 # Detailed documentation  
+└── SETUP_GUIDE.md           # Quick setup guide
+```
+
+### Key Classes
+- `RenderAPIClient` - Render.com API integration
+- `SavoliaQuickBot` - Main bot logic (demo version)
+- `AdvancedSavoliaBot` - Full bot with AI features
+- `TelegramLogFormatter` - Message formatting
+- `LogAnalyzer` - Error pattern detection
+
+## 📈 Monitoring Capabilities
+
+### ✅ **What Bot Monitors**
+- **Service Health**: Up/Down status for all 4 services
+- **Deployment Status**: Success/Failure of deployments  
+- **Error Logs**: Real-time ERROR level log detection
+- **Performance**: Response times and resource usage
+- **Uptime**: Service availability tracking
+
+### 🚨 **Alert Types**
+- **Deploy Failed**: Immediate notification when deployment fails
+- **Critical Errors**: Server errors (500, 503, timeout)
+- **Service Down**: When service becomes unavailable
+- **High Error Rate**: When error frequency exceeds threshold
+
+## 🔧 Customization
+
+### Adding New Services
+```python
+# Bot automatically detects all Render services
+# No configuration needed for new services
+```
+
+### Custom Alert Rules
+```python
+# In LogAnalyzer class, modify:
+if log.level == 'ERROR' and 'critical' in log.message.lower():
+    should_alert = True
+    alert_type = "🚨 CRITICAL ERROR"
+```
+
+### Language Customization
+```python
+# In TelegramLogFormatter, modify text templates:
+"✅ Muvaffaqiyatli" → Your language
+"❌ Xatolik" → Your language  
+"🔄 Yangilash" → Your language
+```
+
+## 📞 Support & Contact
+
+- **Telegram Bot**: Search for token `8087171595:AAGcTv_TiNAY-Mv8CSyaIwk2tzYnnEM4Dsk`
+- **Demo Password**: `SavoliaAdmin2025!`
+- **GitHub Issues**: [Create Issue](https://github.com/jadev-a11y/savolia-monitoring-bot/issues)
+- **Documentation**: [Setup Guide](SETUP_GUIDE.md)
+
+## 📄 License
+
+MIT License - feel free to use, modify, and distribute.
 
 ---
 
-**🔥 Создано специально для Savolia AI - 2025**
+**🚀 Built for Savolia AI - Advanced monitoring made simple**
 
-*Bot token: 8087171595:AAGcTv_TiNAY-Mv8CSyaIwk2tzYnnEM4Dsk*
+*Developed with ❤️ using Claude Code*
