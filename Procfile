@@ -1,0 +1,1 @@
+web: python quick_demo_bot.py

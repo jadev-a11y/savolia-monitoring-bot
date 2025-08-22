@@ -1,4 +1,5 @@
-# Minimal requirements for quick demo bot
+# Minimal requirements for Railway deployment
 python-telegram-bot==20.7
 aiohttp==3.9.1
 python-dotenv==1.0.0
+asyncio-mqtt==0.16.1
