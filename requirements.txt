@@ -1,0 +1,75 @@
+# Advanced Savolia AI Telegram Monitoring Bot 2025
+# Requirements for all features
+
+# Core Telegram Bot
+python-telegram-bot==20.7
+aiohttp==3.9.1
+asyncio
+
+# Database and Analytics
+sqlite3
+pandas==2.1.4
+numpy==1.25.2
+scipy==1.11.4
+
+# Charts and Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+plotly==5.17.0
+Pillow==10.1.0
+
+# AI and Machine Learning
+openai==1.3.8
+scikit-learn==1.3.2
+tensorflow==2.15.0
+torch==2.1.2
+
+# Web Scraping and APIs
+requests==2.31.0
+beautifulsoup4==4.12.2
+selenium==4.16.0
+
+# Email and Notifications
+smtplib
+email
+twilio==8.10.3
+
+# QR Codes and Images
+qrcode==7.4.2
+opencv-python==4.8.1.78
+
+# Logging and Monitoring
+loguru==0.7.2
+prometheus-client==0.19.0
+psutil==5.9.6
+
+# Advanced Features
+schedule==1.2.0
+python-dotenv==1.0.0
+cryptography==41.0.8
+jwt==1.3.1
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# Real-time Features
+websockets==12.0
+socketio==5.10.0
+redis==5.0.1
+
+# File Processing
+PyPDF2==3.0.1
+python-docx==1.1.0
+openpyxl==3.1.2
+
+# Audio Processing (for voice reports)
+pydub==0.25.1
+speech-recognition==3.10.0
+gtts==2.4.0
+
+# Weather and External APIs
+pyowm==3.3.0
+geocoder==1.38.1
+
+# System Monitoring
+docker==6.1.3
+kubernetes==28.1.0
